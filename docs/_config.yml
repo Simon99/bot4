@@ -1,0 +1,16 @@
+title: Clawdbot System Prompt 結構說明
+description: 深入解析 Clawdbot AI 助手的 System Prompt 架構
+theme: jekyll-theme-cayman
+lang: zh-TW
+markdown: kramdown
+highlighter: rouge
+
+# SEO
+url: "https://simon99.github.io"
+baseurl: "/bot4"
+
+# Build settings
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
