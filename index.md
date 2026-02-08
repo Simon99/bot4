@@ -7,13 +7,37 @@ lang: zh-TW
 
 # Clawdbot System Prompt 結構說明
 
-> **版本：** 1.0.0  
-> **更新時間：** 2025-01-21  
+> **版本：** 1.1.0  
+> **更新時間：** 2026-02-08  
 > **源碼位置：** `clawdbot/dist/agents/system-prompt.js`
 
 ## 📋 概述
 
 Clawdbot 的 System Prompt 由 `buildAgentSystemPrompt()` 函數動態生成，根據運行時配置組裝不同區塊。本文件說明每個區塊的用途和結構。
+
+---
+
+## 🖼️ 圖解總覽
+
+### 圖 1：整體架構圖
+展示 System Prompt 的 7 層結構：
+
+![整體架構圖](images/diagram-1-architecture.jpg)
+
+### 圖 2：資料流向圖
+展示 7 個檔案如何通過 `buildAgentSystemPrompt()` 組裝成 System Prompt：
+
+![資料流向圖](images/diagram-2-data-flow.jpg)
+
+### 圖 3：區塊關係圖
+展示 Tooling、Skills、Memory、Project Context 四個主要區塊的互動關係：
+
+![區塊關係圖](images/diagram-3-block-relationships.jpg)
+
+### 圖 4：載入順序圖
+展示 7 個階段的時間線（Core Identity → Tooling → Skills → Workspace → Project Context → Messaging → Runtime）：
+
+![載入順序圖](images/diagram-4-loading-sequence.jpg)
 
 ---
 
@@ -539,4 +563,4 @@ export function buildAgentSystemPrompt(params: {
 
 ---
 
-> **版本：** 1.0.0 | **更新時間：** 2025-01-21
+> **版本：** 1.1.0 | **更新時間：** 2026-02-08
